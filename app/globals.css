@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #EFEBE0;
+  --color-foreground: #000000;
+  --color-muted: rgba(0, 0, 0, 0.5);
+  
+  --font-inter: var(--font-inter), sans-serif;
+}
+
+@layer base {
+  :root {
+    --bg: #EFEBE0;
+    --text: #000000;
+  }
+  
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-inter);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Utility for massive text kerning */
+  .tracking-tighter-max {
+    letter-spacing: -0.06em;
+  }
+  
+  .tracking-tight-large {
+    letter-spacing: -0.04em;
+  }
+  
+  /* Circular text animation */
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: rotate 12s linear infinite;
+  }
+}
+
